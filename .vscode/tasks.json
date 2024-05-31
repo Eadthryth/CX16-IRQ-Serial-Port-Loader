@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ca65",
+            "command": "/home/patrick/workspace/cc65/bin/cl65 -t cx16 -C linker.cfg -o AUTOBOOT.X16 -l main.list ./src/main.asm",
+            "type": "shell",
+            "args": [],
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        },
+        {
+            "label": "box16",
+            "command": "/home/patrick/workspace/box16/build/box16/box16 -prg AUTOBOOT.X16 -zeroram -run",
+            "type": "shell",
+            "args": [],
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build",
+            "dependsOn": [ "ca65" ]
+        },
+        {
+            "label" : "Build",
+            "dependsOn" : [ "box16" ]
+        }
+    ]
+}
