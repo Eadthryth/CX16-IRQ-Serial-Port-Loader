@@ -43,7 +43,7 @@ INTR_SETUP = %00000001
 ; Bit 2				: Clears TX FIFO and counter
 ; Bit 1				: Clears RX FIFO and counter
 ; Bit 0				: Enable FIFO Buffers
-FIFO_SETUP = %00000111
+FIFO_SETUP = %11000111
 
 ;BAUD_RATE_DIVISOR = $0025
 ; 9600 (for testing 9-pin RS232)
