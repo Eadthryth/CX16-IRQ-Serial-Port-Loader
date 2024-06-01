@@ -16,7 +16,7 @@
         },
         {
             "label": "box16",
-            "command": "/home/patrick/workspace/box16/build/box16/box16 -prg AUTOBOOT.X16 -zeroram -run",
+            "command": "/home/patrick/workspace/box16/build/box16/box16 -prg AUTOBOOT.X16 -zeroram",
             "type": "shell",
             "args": [],
             "problemMatcher": [
